@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ucapan Valentine</title>
+<!-- Tambahkan link CSS untuk Bootstrap -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('red1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#message {
+    margin-top: 50px;
+    font-size: 24px;
+    color: white;
+}
+
+#heart {
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.bottom-images {
+    margin-top: 20px;
+}
+
+.bottom-image {
+    width: 150px;
+    height: auto;
+}
+
+.nextButton {
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="message">Klik hati untuk melihat pesan spesial dari fitri to opall!</div>
+            <img id="heart" src="https://emojicdn.elk.sh/❤️" width="100" height="100">
+            <div id="bottomImages" class="bottom-images hidden">
+                <img id="bottomImage1" class="bottom-image" src="panda6.gif" alt="Gift 1"> <!-- Ganti 'gift1.png' dengan URL atau path lokal gambar Anda -->
+                <img id="bottomImage2" class="bottom-image hidden" src="panda5.gif" alt="Gift 2"> <!-- Ganti 'gift2.png' dengan URL atau path lokal gambar Anda -->
+            </div>
+            <button id="nextButton1" class="hidden nextButton btn btn-primary">Next</button>
+            <button id="nextButton2" class="hidden nextButton btn btn-primary">Next</button>
+            <button id="nextButton3" class="hidden nextButton btn btn-primary">Next</button>
+            <button id="nextButton4" class="hidden nextButton btn btn-primary">Next</button>
+            <button id="nextButton5" class="hidden nextButton btn btn-primary">Next</button>
+            <button id="nextButton6" class="hidden nextButton btn btn-primary">Next</button>
+            <button id="nextButton7" class="hidden nextButton btn btn-primary">Next</button>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  const heart = document.getElementById('heart');
+  const message = document.getElementById('message');
+  const bottomImages = document.getElementById('bottomImages');
+  const bottomImage1 = document.getElementById('bottomImage1');
+  const bottomImage2 = document.getElementById('bottomImage2');
+  const nextButton1 = document.getElementById('nextButton1');
+  const nextButton2 = document.getElementById('nextButton2');
+  const nextButton3 = document.getElementById('nextButton3');
+  const nextButton4 = document.getElementById('nextButton4');
+  const nextButton5 = document.getElementById('nextButton5');
+  const nextButton6 = document.getElementById('nextButton6');
+  const nextButton7 = document.getElementById('nextButton7');
+
+  heart.addEventListener('click', () => {
+    message.innerHTML = "Selamat Hari Valentine!❤️<br> sayanggkuuu cintakuuu gantenggkuu Semua kebaikan, kekuatan, dan caramu memperlakukan aku dengan penuh cinta merupakan alasan bahwa kamu adalah Valentine-ku, Kamu adalah bintang yang bersinar setiap hari dalam hidupku. Kamu adalah alasan mengapa aku bersinar dengan begitu banyak kebahagiaan dan kegembiraan.";
+    bottomImages.classList.remove('hidden');
+    bottomImage1.classList.remove('hidden');
+    heart.style.display = 'none';
+    nextButton1.classList.remove('hidden');
+  });
+
+  nextButton1.addEventListener('click', () => {
+    message.innerHTML = "Air arak diharamkan<br>Karenanya nyawa melayang<br>Meskipun jarak memisahkan<br>Semua itu bukan penghalang";
+    bottomImage1.classList.add('hidden');
+    bottomImage2.classList.remove('hidden');
+    nextButton1.style.display = 'none';
+    nextButton2.classList.remove('hidden');
+  });
+
+  nextButton2.addEventListener('click', () => {
+    // Tambahkan teks untuk bagian keempat di sini
+    message.innerHTML = "Sinii peyukk ayangggg, utututu jadii makinn cayanggg nantii mauu di peyukk benerann amaa ayanggg >//< boleehh nggaaa?";
+    bottomImage2.classList.add('hidden');
+    // Tambahkan gambar untuk bagian keempat di sini
+    const bottomImage4 = document.createElement('img');
+    bottomImage4.setAttribute('class', 'bottom-image');
+    bottomImage4.setAttribute('src', 'panda7.gif'); // Ganti 'panda4.gif' dengan URL atau path lokal gambar Anda
+    bottomImage4.setAttribute('alt', 'Gift 4');
+    bottomImages.appendChild(bottomImage4);
+    // Tambahkan logika atau aksi yang ingin dilakukan untuk bagian keempat di sini
+    nextButton2.style.display = 'none';
+    nextButton3.classList.remove('hidden');
+  });
+
+  nextButton3.addEventListener('click', () => {
+    // Hapus semua gambar sebelumnya
+    bottomImages.innerHTML = "";
+    // Sembunyikan teks pesan
+    message.innerHTML = "";
+    // Sembunyikan tombol next
+    nextButton3.style.display = 'none';
+    
+    // Definisikan lebar dan tinggi yang Anda inginkan
+    const imageWidth = 300; // Misalnya, lebar 500px
+    const imageHeight = 200; // Misalnya, tinggi 300px
+    
+    // Hanya menampilkan gambar bebek
+    const bottomImageFinal = document.createElement('img');
+    bottomImageFinal.setAttribute('class', 'bottom-image large'); // Tambahkan kelas large
+    bottomImageFinal.setAttribute('src', 'bebek1.jpg'); // Ganti 'bebek1.jpg' dengan URL atau path lokal gambar Anda
+    bottomImageFinal.setAttribute('alt', 'Final Gift');
+    
+    // Set ukuran gambar sesuai yang Anda tentukan
+    bottomImageFinal.style.width = imageWidth + 'px';
+    bottomImageFinal.style.height = imageHeight + 'px';
+    
+    bottomImages.appendChild(bottomImageFinal);
+    // Tampilkan tombol next keempat
+    nextButton4.style.display = 'block';
+  });
+
+  nextButton4.addEventListener('click', () => {
+    // Hapus semua gambar sebelumnya
+    bottomImages.innerHTML = "";
+    // Sembunyikan teks pesan
+    message.innerHTML = "";
+    // Sembunyikan tombol next
+    nextButton4.style.display = 'none';
+    
+    // Definisikan lebar dan tinggi yang Anda inginkan
+    const imageWidth = 300; // Misalnya, lebar 300px
+    const imageHeight = 200; // Misalnya, tinggi 200px
+    
+    // Hanya menampilkan gambar bebek2
+    const bottomImageFinal = document.createElement('img');
+    bottomImageFinal.setAttribute('class', 'bottom-image large'); // Tambahkan kelas large
+    bottomImageFinal.setAttribute('src', 'bebek2.jpg'); // Ganti 'bebek2.jpg' dengan URL atau path lokal gambar Anda
+    bottomImageFinal.setAttribute('alt', 'Final Gift');
+    
+    // Set ukuran gambar sesuai yang Anda tentukan
+    bottomImageFinal.style.width = imageWidth + 'px';
+    bottomImageFinal.style.height = imageHeight + 'px';
+    
+    bottomImages.appendChild(bottomImageFinal);
+    // Tampilkan tombol next kelima
+    nextButton5.style.display = 'block';
+  });
+
+  nextButton5.addEventListener('click', () => {
+    // Hapus semua gambar sebelumnya
+    bottomImages.innerHTML = "";
+    // Sembunyikan teks pesan
+    message.innerHTML = "";
+    // Sembunyikan tombol next
+    nextButton5.style.display = 'none';
+    
+    // Definisikan lebar dan tinggi yang Anda inginkan
+    const imageWidth = 300; // Misalnya, lebar 300px
+    const imageHeight = 200; // Misalnya, tinggi 200px
+    
+    // Hanya menampilkan gambar bebek3
+    const bottomImageFinal = document.createElement('img');
+    bottomImageFinal.setAttribute('class', 'bottom-image large'); // Tambahkan kelas large
+    bottomImageFinal.setAttribute('src', 'bebek3.jpg'); // Ganti 'bebek3.jpg' dengan URL atau path lokal gambar Anda
+    bottomImageFinal.setAttribute('alt', 'Final Gift');
+    
+    // Set ukuran gambar sesuai yang Anda tentukan
+    bottomImageFinal.style.width = imageWidth + 'px';
+    bottomImageFinal.style.height = imageHeight + 'px';
+    
+    bottomImages.appendChild(bottomImageFinal);
+    // Tampilkan tombol next keenam
+    nextButton6.style.display = 'block';
+
+});
+
+  nextButton6.addEventListener('click', () => {
+    // Sembunyikan teks pesan
+    bottomImages.innerHTML = "";
+    message.innerHTML = "maaff yaa ayanggg akuu cumaa bisaa kasihh ini mwhehee";
+    // Sembunyikan tombol next
+    nextButton6.style.display = 'none';
+     // Tambahkan gambar gif maaf
+     const sorryGif = document.createElement('img');
+    sorryGif.setAttribute('class', 'bottom-image');
+    sorryGif.setAttribute('src', 'sorry.gif'); // Ganti 'sorry.gif' dengan URL atau path lokal gambar Anda
+    sorryGif.setAttribute('alt', 'Sorry GIF');
+    bottomImages.appendChild(sorryGif);
+    // Tampilkan tombol next ketujuh
+    nextButton7.style.display = 'block';
+  });
+
+  nextButton7.addEventListener('click', () => {
+    // Sembunyikan teks pesan
+    bottomImages.innerHTML = "";
+    message.innerHTML = "I LOVEEE YOUUU MOREEE!!";
+    // Sembunyikan tombol next
+    nextButton7.style.display = 'none';
+     // Tambahkan gambar gif ily
+     const ilyGif = document.createElement('img');
+    ilyGif.setAttribute('class', 'bottom-image');
+    ilyGif.setAttribute('src', 'ily.gif'); // Ganti 'ily.gif' dengan URL atau path lokal gambar Anda
+    ilyGif.setAttribute('alt', 'I Love You GIF');
+    bottomImages.appendChild(ilyGif);
+  });
+</script>
+</body>
+</html>
